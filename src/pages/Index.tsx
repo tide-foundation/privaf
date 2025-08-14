@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useTideCloak, Authenticated, Unauthenticated } from '@tidecloak/react';
 import { useNavigate } from 'react-router-dom';
-import { Shield, Lock, Database, ExternalLink, Eye } from 'lucide-react';
+import { Shield, Lock, Database, ExternalLink, Eye, EyeOff } from 'lucide-react';
 export default function Index() {
   const {
     login,
@@ -59,7 +59,7 @@ export default function Index() {
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-              <Lock className="w-8 h-8 text-primary" />
+              <EyeOff className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-3">Zero knowledge auth</h3>
             <p className="text-muted-foreground">Your password is never stored or exposed.</p>
