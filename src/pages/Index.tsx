@@ -131,7 +131,7 @@ const Index = () => {
               <Button 
                 variant="neonPurple" 
                 className="flex items-center gap-2"
-                onClick={() => window.open('#', '_blank')}
+                onClick={() => window.open('https://github.com/tide-foundation/tidecloak-playground', '_blank')}
               >
                 <ExternalLink size={16} />
                 GitHub Codespaces Demo
