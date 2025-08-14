@@ -69,7 +69,7 @@ export default function Index() {
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
               <Database className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Local-First Storage</h3>
+            <h3 className="text-xl font-semibold mb-3">Zero Trust</h3>
             
           </div>
           
