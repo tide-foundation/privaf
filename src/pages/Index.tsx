@@ -135,6 +135,22 @@ export default function Index() {
               Trust me <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">bro</span>
             </h2>
             
+            <div className="grid gap-8 mb-12">
+              <div className="flex flex-col md:flex-row md:justify-between gap-6 mb-12">
+                <div className="flex items-center gap-3 md:justify-start">
+                  <Shield className="text-primary" size={24} />
+                  <span className="font-semibold">Zero knowledge architecture</span>
+                </div>
+                <div className="flex items-center gap-3 md:justify-center">
+                  <Lock className="text-primary" size={24} />
+                  <span className="font-semibold">Zero Trust principles</span>
+                </div>
+                <div className="flex items-center gap-3 md:justify-end">
+                  <Eye className="text-primary" size={24} />
+                  <span className="font-semibold">Zero quality assurance</span>
+                </div>
+              </div>
+
               <Card className="p-6 bg-card/50 backdrop-blur border-border/50">
                 <h3 className="font-semibold mb-4 flex items-center justify-center gap-2">
                   Not certified with:
