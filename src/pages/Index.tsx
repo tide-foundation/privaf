@@ -66,21 +66,20 @@ const Index = () => {
           </h2>
           
           <div className="grid gap-8 mb-12">
-            <Card className="p-6 bg-card/50 backdrop-blur border-border/50">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              <div className="flex items-center gap-3">
                 <Shield className="text-neon-cyan" size={24} />
                 <span className="font-semibold">Zero knowledge architecture</span>
-                <a 
-                  href="https://tidecloak.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-neon-blue hover:text-neon-cyan transition-colors"
-                >
-                  <ExternalLink size={16} />
-                </a>
               </div>
-              <p className="text-muted-foreground">True Zero Trust. Zero quality assurance.</p>
-            </Card>
+              <div className="flex items-center gap-3">
+                <Lock className="text-neon-blue" size={24} />
+                <span className="font-semibold">Zero Trust principles</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Eye className="text-neon-pink" size={24} />
+                <span className="font-semibold">Zero quality assurance</span>
+              </div>
+            </div>
 
             <Card className="p-6 bg-card/50 backdrop-blur border-border/50">
               <h3 className="font-semibold mb-4 flex items-center justify-center gap-2">
