@@ -63,16 +63,16 @@ const Index = () => {
           </h2>
           
           <div className="grid gap-8 mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col md:flex-row md:justify-between gap-6 mb-12">
+              <div className="flex items-center gap-3 md:justify-start">
                 <Shield className="text-neon-cyan" size={24} />
                 <span className="font-semibold">Zero knowledge architecture</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 md:justify-center">
                 <Lock className="text-neon-blue" size={24} />
                 <span className="font-semibold">Zero Trust principles</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 md:justify-end">
                 <Eye className="text-neon-pink" size={24} />
                 <span className="font-semibold">Zero quality assurance</span>
               </div>
