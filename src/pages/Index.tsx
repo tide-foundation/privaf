@@ -70,6 +70,7 @@ export default function Index() {
               <Database className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-3">Zero Trust</h3>
+            <p className="text-muted-foreground">Your data is encrypted with a key no-one can ever access directly.</p>
             
           </div>
           
