@@ -160,10 +160,6 @@
 
   .compliance-logo:hover img {
     @apply opacity-95;
-  }
-
-  .compliance-logo:hover::after {
-    content: '✕';
-    @apply absolute inset-0 flex items-center justify-center text-2xl font-bold text-neon-pink neon-glow-pink;
+    filter: drop-shadow(0 0 15px hsl(var(--neon-pink) / 0.6));
   }
 }

@@ -11,7 +11,7 @@ const ComplianceLogo = ({ name, imageSrc, className = "" }: ComplianceLogoProps)
         <img 
           src={imageSrc} 
           alt={name} 
-          className="w-full h-full object-contain opacity-70"
+          className="w-full h-full object-contain opacity-55"
         />
       ) : (
         name
