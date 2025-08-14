@@ -155,24 +155,15 @@
   
   /* Compliance logo hover effect */
   .compliance-logo {
-    position: relative;
-    opacity: 0.3;
-    transition: all 0.3s ease;
+    @apply transition-all duration-300 relative;
   }
-  
-  .compliance-logo:hover {
-    opacity: 0.6;
+
+  .compliance-logo:hover img {
+    @apply opacity-95;
   }
-  
+
   .compliance-logo:hover::after {
     content: '✕';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: hsl(var(--neon-pink));
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: var(--glow-pink);
+    @apply absolute inset-0 flex items-center justify-center text-2xl font-bold text-neon-pink neon-glow-pink;
   }
 }
