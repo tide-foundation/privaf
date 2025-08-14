@@ -79,16 +79,6 @@ export default function Index() {
       </header>
 
       <main className="container mx-auto px-6 pb-16">
-
-        
-        {/* Trust me bro */}
-        <section className="py-16">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center">
-              Trust me <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">bro</span>
-            </h2>
-
-            
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
@@ -114,6 +104,13 @@ export default function Index() {
             <p className="text-muted-foreground">We've bareley tested this app. It's full of bugs.</p>
           </div>
         </div>
+
+        {/* Trust me bro */}
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold mb-12 text-center">
+              Trust me <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">bro</span>
+            </h2>
 
 
               <Card className="p-6 bg-card/50 backdrop-blur border-border/50">
