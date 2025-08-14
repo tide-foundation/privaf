@@ -105,13 +105,36 @@ export default function Index() {
           </div>
         </div>
 
+        {/* What is PrivAF? */}
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold mb-8 text-center">
+              What is <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">PrivAF</span>?
+            </h2>
+            <Card className="p-8 bg-card/50 backdrop-blur border-border/50">
+              <p className="text-lg leading-relaxed text-center">
+                A personal vault for notes and files, vibe coded. Locked by{" "}
+                <a 
+                  href="https://tidecloak.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-accent transition-colors underline"
+                >
+                  TideCloak
+                </a>{" "}
+                with keys nobody will ever hold and zero knowledge password authentication.
+              </p>
+            </Card>
+          </div>
+        </section>
+
         {/* Trust me bro */}
         <section className="py-16">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-12 text-center">
               Trust me <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">bro</span>
             </h2>
-
+            
               <Card className="p-6 bg-card/50 backdrop-blur border-border/50">
                 <h3 className="font-semibold mb-4 flex items-center justify-center gap-2">
                   Not certified with:
