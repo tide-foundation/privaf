@@ -160,13 +160,17 @@ export default function Vault() {
     <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5">
       <div className="container mx-auto px-6 py-8">
         <header className="text-center mb-8">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
-            PrivAF Data Vault
-          </h1>
-          <p className="text-lg text-muted-foreground">
-            Your secure, encrypted personal data storage
-          </p>
-        </header>
+          <div className="flex justify-center mb-6">
+          <img 
+            src="/lovable-uploads/ce72950e-ea40-4444-bc38-4e938049df7b.png" 
+            alt="PrivAF - Neon logo with padlock and sunglasses" 
+            className="h-48 w-auto"
+          />
+        </div>
+        <h2 className="text-3xl font-bold mb-8 text-center">
+              Vibe <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Coded.</span> Provably <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Secure.</span>
+            </h2>
+        </header>   
 
         <div className="flex justify-center gap-4 mb-8">
           <Button 
