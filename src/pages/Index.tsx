@@ -11,8 +11,8 @@ const Index = () => {
       <header className="container mx-auto px-6 py-8 text-center">
         <div className="flex justify-center mb-6">
           <img 
-            src="/lovable-uploads/4a70070e-1713-4226-b490-2a135b0e2a8b.png" 
-            alt="PrivAF - Padlock with sunglasses" 
+            src="/lovable-uploads/ce72950e-ea40-4444-bc38-4e938049df7b.png" 
+            alt="PrivAF - Neon logo with padlock and sunglasses" 
             className="h-48 w-auto"
           />
         </div>
