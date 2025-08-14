@@ -1,0 +1,12 @@
+{
+  "realm": "master",
+  "auth-server-url": "http://localhost:8080/",
+  "ssl-required": "external",
+  "resource": "tidecloak-client",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "your-client-secret"
+  },
+  "use-resource-role-mappings": true,
+  "confidential-port": 0
+}
