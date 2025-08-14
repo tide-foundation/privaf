@@ -20,9 +20,6 @@ export default function Index() {
             className="h-48 w-auto"
           />
         </div>
-        <h1 className="text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
-          PrivAF
-        </h1>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Your privacy is private. Secure, encrypted, and absolutely private data storage that puts you in control.
         </p>
