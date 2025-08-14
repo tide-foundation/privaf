@@ -97,9 +97,7 @@ export default function Index() {
               
 
               <Card className="p-6 bg-card/50 backdrop-blur border-border/50">
-                <h3 className="font-semibold mb-4 flex items-center justify-center gap-2">
-                  Not certified with:
-                </h3>
+                <h3 className="font-semibold mb-4 flex items-center justify-center gap-2">Not (officially) certified with:</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-4">
                   <ComplianceLogo name="ISO27001:2022" imageSrc="/lovable-uploads/556a1445-7570-4178-90d8-44351d2125a0.png" />
                   <ComplianceLogo name="HIPAA" imageSrc="/lovable-uploads/373a52d7-7db5-4d14-9b9b-f9d1f638110a.png" />
