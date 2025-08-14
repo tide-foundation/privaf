@@ -16,9 +16,6 @@ const Index = () => {
             className="h-32 w-auto"
           />
         </div>
-        <h1 className="text-6xl font-black mb-4 neon-text">
-          PrivAF
-        </h1>
         <p className="text-xl font-semibold mb-8 text-neon-cyan">
           Vibe Coded. Provably Secure.
         </p>
