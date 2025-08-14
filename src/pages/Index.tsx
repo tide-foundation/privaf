@@ -121,7 +121,7 @@ export default function Index() {
               <h3 className="text-2xl font-bold mb-4 text-center text-primary">
                 Try TideCloak
               </h3>
-              <p className="text-center mb-6 text-muted-foreground">More secure than Qantas - in minutes. Guaranteed.</p>
+              <p className="text-center mb-6 text-muted-foreground">More secure than <a href="https://www.bleepingcomputer.com/news/security/qantas-confirms-data-breach-impacts-57-million-customers/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">Qantas</a> - in minutes. Guaranteed.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="neonBlue" className="flex items-center gap-2" onClick={() => window.open('https://github.com/tide-foundation/tidecloak-gettingstarted', '_blank')}>
                 <ExternalLink size={16} />
