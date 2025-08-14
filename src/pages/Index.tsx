@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useTideCloak, Authenticated, Unauthenticated } from '@tidecloak/react';
 import { useNavigate } from 'react-router-dom';
-import { Shield, Lock, Database, ExternalLink, Eye, EyeOff } from 'lucide-react';
+import { Shield, Lock, Database, ExternalLink, Eye, EyeOff, Bug } from 'lucide-react';
 export default function Index() {
   const {
     login,
@@ -76,7 +76,7 @@ export default function Index() {
           
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-              <Shield className="w-8 h-8 text-primary" />
+              <Bug className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-3">Zero quality assurance</h3>
             <p className="text-muted-foreground">We've barely tested this thing.</p>
