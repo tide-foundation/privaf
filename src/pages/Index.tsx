@@ -5,23 +5,32 @@ import { Card } from "@/components/ui/card";
 import { useTideCloak, Authenticated, Unauthenticated } from '@tidecloak/react';
 import { useNavigate } from 'react-router-dom';
 import { Shield, Lock, Database, ExternalLink, Eye } from 'lucide-react';
+
 export default function Index() {
-  const {
-    login,
-    logout
-  } = useTideCloak();
+  const { login, logout } = useTideCloak();
   const navigate = useNavigate();
-  return <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5">
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5">
       <header className="container mx-auto px-6 py-8 text-center">
         <div className="flex justify-center mb-6">
-          <img src="/lovable-uploads/ce72950e-ea40-4444-bc38-4e938049df7b.png" alt="PrivAF - Neon logo with padlock and sunglasses" className="h-48 w-auto" />
+          <img 
+            src="/lovable-uploads/ce72950e-ea40-4444-bc38-4e938049df7b.png" 
+            alt="PrivAF - Neon logo with padlock and sunglasses" 
+            className="h-48 w-auto"
+          />
         </div>
         <h2 className="text-3xl font-bold mb-8 text-center">
               Vibe <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Coded.</span> Provably <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Secure.</span>
             </h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               A personal vault for notes and files, vibe coded. Locked by{" "}
-              <a href="https://tidecloak.com" target="_blank" rel="noopener noreferrer" className="text-neon-blue hover:text-neon-cyan transition-colors underline">
+              <a 
+                href="https://tidecloak.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-neon-blue hover:text-neon-cyan transition-colors underline"
+              >
                 TideCloak
               </a>{" "}
               with keys nobody will ever hold and zero knowledge password authentication.
@@ -29,7 +38,12 @@ export default function Index() {
 
         <Unauthenticated>
           <div className="space-y-6 mb-12">
-            <Button onClick={login} variant="neon" size="lg" className="text-lg px-8 py-4 mb-4">
+            <Button 
+          onClick={login}
+              variant="neon" 
+          size="lg" 
+          className="text-lg px-8 py-4 mb-4"
+        >
           <Eye className="mr-2" />
           Enter your vault
         </Button>
@@ -43,11 +57,20 @@ export default function Index() {
         <Authenticated>
           <div className="space-y-6 mb-12">
             <div className="flex gap-4 justify-center">
-              <Button onClick={() => navigate('/vault')} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-4">
+              <Button 
+                onClick={() => navigate('/vault')}
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-4"
+              >
                 <Database className="w-5 h-5 mr-2" />
                 Open Vault
               </Button>
-              <Button onClick={logout} size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-4">
+              <Button 
+                onClick={logout}
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-4"
+              >
                 Logout
               </Button>
             </div>
@@ -61,29 +84,49 @@ export default function Index() {
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
               <Lock className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Zero</h3>
-            <p className="text-muted-foreground">Military-grade encryption ensures your data remains private and secure, even from us.</p>
+            <h3 className="text-xl font-semibold mb-3">Zero knowledge auth</h3>
+            <p className="text-muted-foreground">Your password is never stored or exposed at any point.</p>
           </div>
           
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
               <Database className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Local-First Storage</h3>
-            
+            <h3 className="text-xl font-semibold mb-3">Zero Trust</h3>
+            <p className="text-muted-foreground">Your encryption key only ever exists in 20 pieces.</p>
           </div>
           
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
               <Shield className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Zero Knowledge</h3>
-            <p className="text-muted-foreground">We can't see your data, and neither can anyone else. True privacy by design.</p>
+            <h3 className="text-xl font-semibold mb-3">Zero quality assurance</h3>
+            <p className="text-muted-foreground">We've barely tested this app. It's probably fully of bugs.</p>
           </div>
         </div>
 
         {/* What is PrivAF? */}
-        
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold mb-8 text-center">
+              What is <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">PrivAF</span>?
+            </h2>
+            <Card className="p-8 bg-card/50 backdrop-blur border-border/50">
+              <p className="text-lg leading-relaxed text-center">
+                A personal vault for notes and files, vibe coded. Locked by{" "}
+                <a 
+                  href="https://tidecloak.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-accent transition-colors underline"
+                >
+                  TideCloak
+                </a>{" "}
+                with keys nobody will ever hold and zero knowledge password authentication.
+              </p>
+            </Card>
+          </div>
+        </section>
 
         {/* Trust me bro */}
         <section className="py-16">
@@ -139,15 +182,27 @@ export default function Index() {
                 Use TideCloak to secure whatever you're building. Even if it's bad.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="outline" className="flex items-center gap-2 border-primary text-primary hover:bg-primary/10" onClick={() => window.open('https://github.com/tide-foundation/tidecloak-gettingstarted', '_blank')}>
+                <Button 
+                  variant="outline" 
+                  className="flex items-center gap-2 border-primary text-primary hover:bg-primary/10"
+                  onClick={() => window.open('https://github.com/tide-foundation/tidecloak-gettingstarted', '_blank')}
+                >
                   <ExternalLink size={16} />
                   React Starter
                 </Button>
-                <Button variant="outline" className="flex items-center gap-2 border-primary text-primary hover:bg-primary/10" onClick={() => window.open('https://github.com/tide-foundation/tidecloak-js/blob/main/packages/tidecloak-create-nextjs/README.md', '_blank')}>
+                <Button 
+                  variant="outline" 
+                  className="flex items-center gap-2 border-primary text-primary hover:bg-primary/10"
+                  onClick={() => window.open('https://github.com/tide-foundation/tidecloak-js/blob/main/packages/tidecloak-create-nextjs/README.md', '_blank')}
+                >
                   <ExternalLink size={16} />
                   Next.JS Starter
                 </Button>
-                <Button variant="outline" className="flex items-center gap-2 border-primary text-primary hover:bg-primary/10" onClick={() => window.open('https://github.com/tide-foundation/tidecloak-playground', '_blank')}>
+                <Button 
+                  variant="outline" 
+                  className="flex items-center gap-2 border-primary text-primary hover:bg-primary/10"
+                  onClick={() => window.open('https://github.com/tide-foundation/tidecloak-playground', '_blank')}
+                >
                   <ExternalLink size={16} />
                   GitHub Codespaces Demo
                 </Button>
@@ -162,11 +217,21 @@ export default function Index() {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex flex-col sm:flex-row gap-6">
-              <a href="https://tidecloak.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+              <a 
+                href="https://tidecloak.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+              >
                 <Shield size={16} />
                 Secured by TideCloak
               </a>
-              <a href="https://tide.org/alpha" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+              <a 
+                href="https://tide.org/alpha" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+              >
                 <ExternalLink size={16} />
                 Join the Alpha
               </a>
@@ -178,5 +243,6 @@ export default function Index() {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 }
