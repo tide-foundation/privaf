@@ -84,24 +84,24 @@ export default function Index() {
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
               <Lock className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Zero</h3>
-            <p className="text-muted-foreground">Military-grade encryption ensures your data remains private and secure, even from us.</p>
+            <h3 className="text-xl font-semibold mb-3">Zero knowledge auth</h3>
+            <p className="text-muted-foreground">Your password is never stored or exposed at any point.</p>
           </div>
           
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
               <Database className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Local-First Storage</h3>
-            <p className="text-muted-foreground">Your data is stored locally on your device with IndexedDB, no cloud servers required.</p>
+            <h3 className="text-xl font-semibold mb-3">Zero Trust</h3>
+            <p className="text-muted-foreground">Your encryption key only ever exists in 20 pieces.</p>
           </div>
           
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
               <Shield className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Zero Knowledge</h3>
-            <p className="text-muted-foreground">We can't see your data, and neither can anyone else. True privacy by design.</p>
+            <h3 className="text-xl font-semibold mb-3">Zero quality assurance</h3>
+            <p className="text-muted-foreground">We've barely tested this app. It's probably fully of bugs.</p>
           </div>
         </div>
 
