@@ -20,6 +20,9 @@ export default function Index() {
             className="h-48 w-auto"
           />
         </div>
+        <h2 className="text-3xl font-bold mb-8 text-center">
+              Vibe <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Coded.</span> Provably <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Secure.</span>
+            </h2>
         <p className="text-xl font-semibold mb-8 text-neon-cyan">
           Vibe Coded. Provably Secure.
         </p>
