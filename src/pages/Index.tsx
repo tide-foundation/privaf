@@ -84,49 +84,26 @@ export default function Index() {
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
               <Lock className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Zero knwoledge</h3>
-            <p className="text-muted-foreground">Your password is never stored or exposed.</p>
+            <h3 className="text-xl font-semibold mb-3">Zero</h3>
+            <p className="text-muted-foreground">Military-grade encryption ensures your data remains private and secure, even from us.</p>
           </div>
           
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
               <Database className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Zero Trust</h3>
-            <p className="text-muted-foreground">Your encryptption key lives in pieces and is never assembled.</p>
+            <h3 className="text-xl font-semibold mb-3">Local-First Storage</h3>
+            <p className="text-muted-foreground">Your data is stored locally on your device with IndexedDB, no cloud servers required.</p>
           </div>
           
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
               <Shield className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Zero quality assurance</h3>
-            <p className="text-muted-foreground">We've bareley tested this app. It's probably buggy.</p>
+            <h3 className="text-xl font-semibold mb-3">Zero Knowledge</h3>
+            <p className="text-muted-foreground">We can't see your data, and neither can anyone else. True privacy by design.</p>
           </div>
         </div>
-
-        {/* What is PrivAF? */}
-        <section className="py-16">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8 text-center">
-              What is <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">PrivAF</span>?
-            </h2>
-            <Card className="p-8 bg-card/50 backdrop-blur border-border/50">
-              <p className="text-lg leading-relaxed text-center">
-                A personal vault for notes and files, vibe coded. Locked by{" "}
-                <a 
-                  href="https://tidecloak.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-accent transition-colors underline"
-                >
-                  TideCloak
-                </a>{" "}
-                with keys nobody will ever hold and zero knowledge password authentication.
-              </p>
-            </Card>
-          </div>
-        </section>
 
         {/* Trust me bro */}
         <section className="py-16">
@@ -134,22 +111,6 @@ export default function Index() {
             <h2 className="text-4xl font-bold mb-12 text-center">
               Trust me <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">bro</span>
             </h2>
-            
-            <div className="grid gap-8 mb-12">
-              <div className="flex flex-col md:flex-row md:justify-between gap-6 mb-12">
-                <div className="flex items-center gap-3 md:justify-start">
-                  <Shield className="text-primary" size={24} />
-                  <span className="font-semibold">Zero knowledge architecture</span>
-                </div>
-                <div className="flex items-center gap-3 md:justify-center">
-                  <Lock className="text-primary" size={24} />
-                  <span className="font-semibold">Zero Trust principles</span>
-                </div>
-                <div className="flex items-center gap-3 md:justify-end">
-                  <Eye className="text-primary" size={24} />
-                  <span className="font-semibold">Zero quality assurance</span>
-                </div>
-              </div>
 
               <Card className="p-6 bg-card/50 backdrop-blur border-border/50">
                 <h3 className="font-semibold mb-4 flex items-center justify-center gap-2">
