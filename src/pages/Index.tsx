@@ -83,7 +83,7 @@ const Index = () => {
             </Card>
 
             <Card className="p-6 bg-card/50 backdrop-blur border-border/50">
-              <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <h3 className="font-semibold mb-4 flex items-center justify-center gap-2">
                 <Lock className="text-neon-pink" size={20} />
                 PrivAF is not certified with any of these
               </h3>
