@@ -23,7 +23,7 @@ export default function Index() {
         <p className="text-xl font-semibold mb-8 text-neon-cyan">
           Vibe Coded. Provably Secure.
         </p>
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               A personal vault for notes and files, vibe coded. Locked by{" "}
               <a 
                 href="https://tidecloak.com" 
