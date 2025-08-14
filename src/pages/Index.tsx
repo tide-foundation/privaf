@@ -70,7 +70,7 @@ export default function Index() {
               <Database className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-3">Local-First Storage</h3>
-            <p className="text-muted-foreground">Your data is stored locally on your device with IndexedDB, no cloud servers required.</p>
+            
           </div>
           
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
