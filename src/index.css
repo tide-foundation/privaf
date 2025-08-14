@@ -2,41 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* PrivAF Neon 90s Retro-Futuristic Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Neon cyberpunk color palette */
+    --background: 240 15% 5%;
+    --foreground: 280 100% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 12% 8%;
+    --card-foreground: 280 100% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 12% 8%;
+    --popover-foreground: 280 100% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Neon pink primary */
+    --primary: 320 100% 60%;
+    --primary-foreground: 240 15% 5%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Electric blue secondary */
+    --secondary: 195 100% 60%;
+    --secondary-foreground: 240 15% 5%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Purple muted */
+    --muted: 260 30% 15%;
+    --muted-foreground: 260 20% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Cyan accent */
+    --accent: 180 100% 70%;
+    --accent-foreground: 240 15% 5%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 260 30% 20%;
+    --input: 260 30% 15%;
+    --ring: 320 100% 60%;
 
     --radius: 0.5rem;
+    
+    /* Custom neon colors */
+    --neon-pink: 320 100% 60%;
+    --neon-blue: 195 100% 60%;
+    --neon-cyan: 180 100% 70%;
+    --neon-purple: 270 100% 70%;
+    
+    /* Gradients */
+    --gradient-background: linear-gradient(135deg, hsl(240 20% 8%) 0%, hsl(240 25% 4%) 100%);
+    --gradient-neon: linear-gradient(45deg, hsl(var(--neon-pink)), hsl(var(--neon-cyan)));
+    
+    /* Shadows and glows */
+    --glow-pink: 0 0 20px hsl(var(--neon-pink) / 0.5);
+    --glow-blue: 0 0 20px hsl(var(--neon-blue) / 0.5);
+    --glow-cyan: 0 0 20px hsl(var(--neon-cyan) / 0.5);
+    --glow-purple: 0 0 20px hsl(var(--neon-purple) / 0.5);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +120,59 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-background);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer components {
+  /* Neon glow effects */
+  .neon-glow-pink {
+    box-shadow: var(--glow-pink);
+    text-shadow: var(--glow-pink);
+  }
+  
+  .neon-glow-blue {
+    box-shadow: var(--glow-blue);
+    text-shadow: var(--glow-blue);
+  }
+  
+  .neon-glow-cyan {
+    box-shadow: var(--glow-cyan);
+    text-shadow: var(--glow-cyan);
+  }
+  
+  .neon-glow-purple {
+    box-shadow: var(--glow-purple);
+    text-shadow: var(--glow-purple);
+  }
+  
+  /* Neon text styles */
+  .neon-text {
+    color: hsl(var(--neon-pink));
+    text-shadow: 0 0 10px hsl(var(--neon-pink) / 0.8);
+  }
+  
+  /* Compliance logo hover effect */
+  .compliance-logo {
+    position: relative;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+  }
+  
+  .compliance-logo:hover {
+    opacity: 0.6;
+  }
+  
+  .compliance-logo:hover::after {
+    content: '✕';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: hsl(var(--neon-pink));
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: var(--glow-pink);
   }
 }
