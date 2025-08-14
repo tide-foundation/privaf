@@ -93,7 +93,7 @@ const Index = () => {
                 <ComplianceLogo name="SOC 2" />
                 <ComplianceLogo name="GDPR" />
               </div>
-              <p className="text-sm text-muted-foreground italic">
+              <p className="text-sm text-muted-foreground italic text-center">
                 Because compliance isn't security. Math is.
               </p>
             </Card>
