@@ -20,8 +20,20 @@ export default function Index() {
             className="h-48 w-auto"
           />
         </div>
+        <p className="text-xl font-semibold mb-8 text-neon-cyan">
+          Vibe Coded. Provably Secure.
+        </p>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Your privacy is private. Secure, encrypted, and absolutely private data storage that puts you in control.
+              A personal vault for notes and files, vibe coded. Locked by{" "}
+              <a 
+                href="https://tidecloak.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-neon-blue hover:text-neon-cyan transition-colors underline"
+              >
+                TideCloak
+              </a>{" "}
+              with keys nobody will ever hold and zero knowledge password authentication.
         </p>
 
         <Unauthenticated>
