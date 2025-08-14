@@ -163,7 +163,7 @@ const Index = () => {
             <SocialLinks />
           </div>
           <div className="text-center mt-8 text-xs text-muted-foreground">
-            <p>PrivAF © 2024 - Because your data deserves better than "trust me bro"</p>
+            <p>Because your data deserves better than "trust me bro"</p>
           </div>
         </div>
       </footer>
