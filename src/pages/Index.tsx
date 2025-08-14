@@ -62,7 +62,7 @@ export default function Index() {
               <Lock className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-3">Zero</h3>
-            <p className="text-muted-foreground">Military-grade encryption ensures your data remains private and secure, even from us.</p>
+            <p className="text-muted-foreground">Your password is never stored or exposed.</p>
           </div>
           
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
