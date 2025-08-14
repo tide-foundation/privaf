@@ -67,7 +67,7 @@ export default function Index() {
           
           <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-              <Database className="w-8 h-8 text-primary" />
+              <Shield className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-3">Zero Trust</h3>
             <p className="text-muted-foreground">Your data is encrypted with a key no-one can ever access directly.</p>
