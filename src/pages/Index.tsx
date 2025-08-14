@@ -82,11 +82,13 @@ const Index = () => {
               <h3 className="font-semibold mb-4 flex items-center justify-center gap-2">
                 Not certified with:
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                <ComplianceLogo name="ISO27001:2022" imageSrc="/lovable-uploads/cf4f2343-7bb9-4a97-bc94-e82564e67e1b.png" />
-                <ComplianceLogo name="HIPAA" imageSrc="/lovable-uploads/cf4f2343-7bb9-4a97-bc94-e82564e67e1b.png" />
-                <ComplianceLogo name="SOC 2" imageSrc="/lovable-uploads/cf4f2343-7bb9-4a97-bc94-e82564e67e1b.png" />
-                <ComplianceLogo name="GDPR" imageSrc="/lovable-uploads/cf4f2343-7bb9-4a97-bc94-e82564e67e1b.png" />
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-4">
+                <ComplianceLogo name="ISO27001:2022" imageSrc="/lovable-uploads/3f53ab3a-4a3c-4baf-a0ef-433e41c89045.png" />
+                <ComplianceLogo name="HIPAA" imageSrc="/lovable-uploads/560722da-097f-46cb-b0ff-f2f012c5feaa.png" />
+                <ComplianceLogo name="SOC 2" imageSrc="/lovable-uploads/959f24a9-2f1d-48a9-b6d9-e1acb9ba1675.png" />
+                <ComplianceLogo name="GDPR" imageSrc="/lovable-uploads/5a4c0c3a-b596-4996-90ff-2a0c71a99b4c.png" />
+                <ComplianceLogo name="PCI DSS" imageSrc="/lovable-uploads/dc191647-9997-4ce8-9840-dfc4301fc9b8.png" />
+                <ComplianceLogo name="FedRAMP" imageSrc="/lovable-uploads/076b2340-e11b-46f4-bb07-3d6b8a052fc4.png" />
               </div>
               <p className="text-sm text-muted-foreground italic text-center">
                 Because compliance isn't security. Math is.
