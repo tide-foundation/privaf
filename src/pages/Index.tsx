@@ -128,6 +128,14 @@ const Index = () => {
                 <ExternalLink size={16} />
                 Next.JS Starter
               </Button>
+              <Button 
+                variant="neonPurple" 
+                className="flex items-center gap-2"
+                onClick={() => window.open('#', '_blank')}
+              >
+                <ExternalLink size={16} />
+                GitHub Codespaces Demo
+              </Button>
             </div>
           </Card>
         </div>

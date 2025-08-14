@@ -20,6 +20,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         neon: "bg-transparent border-2 border-neon-pink text-neon-pink hover:bg-neon-pink hover:text-background hover:shadow-[0_0_20px_hsl(var(--neon-pink)_/_0.5)] font-bold",
         neonBlue: "bg-transparent border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-background hover:shadow-[0_0_20px_hsl(var(--neon-blue)_/_0.5)] font-bold",
+        neonPurple: "bg-transparent border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-background hover:shadow-[0_0_20px_hsl(var(--neon-purple)_/_0.5)] font-bold",
       },
       size: {
         default: "h-10 px-4 py-2",
