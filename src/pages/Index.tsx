@@ -77,7 +77,7 @@ export default function Index() {
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
               <Shield className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Zero Knowledge</h3>
+            <h3 className="text-xl font-semibold mb-3">Zero quality assurance</h3>
             <p className="text-muted-foreground">We can't see your data, and neither can anyone else. True privacy by design.</p>
           </div>
         </div>
