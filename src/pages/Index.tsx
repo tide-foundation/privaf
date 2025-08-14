@@ -11,9 +11,9 @@ const Index = () => {
       <header className="container mx-auto px-6 py-8 text-center">
         <div className="flex justify-center mb-6">
           <img 
-            src="/lovable-uploads/cf4f2343-7bb9-4a97-bc94-e82564e67e1b.png" 
+            src="/lovable-uploads/4a70070e-1713-4226-b490-2a135b0e2a8b.png" 
             alt="PrivAF - Padlock with sunglasses" 
-            className="h-32 w-auto"
+            className="h-48 w-auto"
           />
         </div>
         <p className="text-xl font-semibold mb-8 text-neon-cyan">
