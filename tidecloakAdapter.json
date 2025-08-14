@@ -1,12 +1,30 @@
 {
-  "realm": "master",
-  "auth-server-url": "http://localhost:8080/",
+  "realm": "sasha-vibing-again",
+  "auth-server-url": "https://login.dauth.me",
   "ssl-required": "external",
-  "resource": "tidecloak-client",
-  "verify-token-audience": true,
-  "credentials": {
-    "secret": "your-client-secret"
+  "resource": "vault",
+  "public-client": true,
+  "confidential-port": 0,
+  "jwk": {
+    "keys": [
+      {
+        "kid": "gtlNJeW5dhJpuzBYMXyrcRUG-rOVeAXweJGQfONXuhI",
+        "kty": "OKP",
+        "alg": "EdDSA",
+        "use": "sig",
+        "crv": "Ed25519",
+        "x": "KGlSArRL0PFWFW4s3sAxs_UsPBUC6Ski3qUbeDJKfYo"
+      }
+    ]
   },
-  "use-resource-role-mappings": true,
-  "confidential-port": 0
+  "vendorId": "2131868475024908671264532119971741310618810111263292227414641263254933361601",
+  "homeOrkUrl": "https://ork1.tideprotocol.com",
+  "client-origin-auth-https://tidecloak-data-haven.lovable.app": "4MfZdknPxrZlfHv8oCEMWR8TAQmh+U0Lnur76pRmoADD7m+4nagl9kMf8k6bfC/XN89mcYadsH7tkkZV33VpDg==",
+  "client-origin-auth-https://sashyo.github.io": "eE3fpjNe7GCNl35XzzPmI/ethydq7Dy/zCPBNUTu4iVWJQLRLI+wKVlmIEPU/xWUwmzI6Txg4VOpkW2eYU61Dg==",
+  "client-origin-auth-http://localhost:3000": "zGGFL7OcYSe1Um/F9YH31cC3ena52gGC5zbQXc7qLHizb5b51HSEyZPjNLNJ+TNauwWsj2UVQhiJo3a/p4EPCA==",
+  "client-origin-auth-https://echo-proof-locker.lovable.app": "Out/p0vhkSwFfWb7pQEDYUjVcXQ/cI29PRP44yzZTayehlAG/Z9VR+FoYvW8D964TtCHj+RXNFfmL2JbAHbjCw==",
+  "client-origin-auth-https://secret-keeper-vault-notes.lovable.app": "jlDhq1oMPqt+6MwSUi2DveDVgtEkn6OOiqaH26oMjaqWCEa7lwt3ajFwUQTKEj0uthcWeGaFRoYwdYkpEfOFCA==",
+  "client-origin-auth-https://cypher-note-haven.lovable.app": "hhIGGhAJndmeW7R51WCFNCZCEd+jiSl6zBVc4sIkYRbV43I+wwR5vWNtXCjymlHaVZS86aPs6keHcpbzoogsBg==",
+  "client-origin-auth-https://privaf-vibe-vault.lovable.app": "qDJdjSuU09fN+CqiMp7Ub/kG7aPa3YtsNMcdXgDqYNrVhEOacebVIFNVOCYz3QB8EgnngmHbZrl9JaADWHGFDg==",
+  "client-origin-auth-http://localhost:8080": "KjlVdzOyzggFYvcBp6rTXGLjma8yi8iXgKMp3z5JnNz0j5W+KOpR5EzVqgR3J5WWC3ckCRsPwZ3q79z22YPGAw=="
 }
