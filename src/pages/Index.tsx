@@ -121,31 +121,17 @@ export default function Index() {
               <h3 className="text-2xl font-bold mb-4 text-center text-primary">
                 Try TideCloak
               </h3>
-              <p className="text-center mb-6 text-muted-foreground">
-                Use TideCloak to secure whatever you're building. Even if it's bad.
-              </p>
+              <p className="text-center mb-6 text-muted-foreground">Use TideCloak to secure whatever you're building. Even if you don't know what you're doing.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="neonBlue" 
-                className="flex items-center gap-2"
-                onClick={() => window.open('https://github.com/tide-foundation/tidecloak-gettingstarted', '_blank')}
-              >
+              <Button variant="neonBlue" className="flex items-center gap-2" onClick={() => window.open('https://github.com/tide-foundation/tidecloak-gettingstarted', '_blank')}>
                 <ExternalLink size={16} />
                 React Starter
               </Button>
-              <Button 
-                variant="neonBlue" 
-                className="flex items-center gap-2"
-                onClick={() => window.open('https://github.com/tide-foundation/tidecloak-js/blob/main/packages/tidecloak-create-nextjs/README.md', '_blank')}
-              >
+              <Button variant="neonBlue" className="flex items-center gap-2" onClick={() => window.open('https://github.com/tide-foundation/tidecloak-js/blob/main/packages/tidecloak-create-nextjs/README.md', '_blank')}>
                 <ExternalLink size={16} />
                 Next.JS Starter
               </Button>
-              <Button 
-                variant="neonPurple" 
-                className="flex items-center gap-2"
-                onClick={() => window.open('https://github.com/tide-foundation/tidecloak-playground', '_blank')}
-              >
+              <Button variant="neonPurple" className="flex items-center gap-2" onClick={() => window.open('https://github.com/tide-foundation/tidecloak-playground', '_blank')}>
                 <ExternalLink size={16} />
                 GitHub Codespaces Demo
               </Button>
