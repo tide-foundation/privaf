@@ -28,7 +28,7 @@ const Index = () => {
           Login & See for Yourself
         </Button>
         <p className="text-sm text-muted-foreground">
-          Nobody else can see your data. Not even us.
+          Because nobody else can. Not even us.
         </p>
       </header>
 
