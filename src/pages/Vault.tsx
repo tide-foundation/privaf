@@ -53,11 +53,29 @@ export default function Vault() {
 
   const handleDecrypt = async (item: VaultItem) => {
     try {
-      const decrypted = await doDecrypt([{ encrypted: item.encryptedData, tags: item.tags }]);
+      let decrypted;
+      
+      if (item.type === 'file') {
+        // For files, decrypt both file data and metadata
+        const decryptedFile = await doDecrypt([
+          { encrypted: item.encryptedData.fileData, tags: ['file'] },
+          { encrypted: item.encryptedData.metadata, tags: ['file_metadata'] }
+        ]);
+        
+        decrypted = {
+          fileData: decryptedFile[0],
+          metadata: JSON.parse(decryptedFile[1])
+        };
+      } else {
+        // For notes, decrypt the string data
+        const decryptedNote = await doDecrypt([{ encrypted: item.encryptedData, tags: ['note'] }]);
+        decrypted = decryptedNote[0];
+      }
+      
       const updatedItem = {
         ...item,
         isDecrypted: true,
-        decryptedData: decrypted[0]
+        decryptedData: decrypted
       };
       
       setItems(items.map(i => i.id === item.id ? updatedItem : i));

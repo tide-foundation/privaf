@@ -26,5 +26,8 @@
   "client-origin-auth-https://secret-keeper-vault-notes.lovable.app": "jlDhq1oMPqt+6MwSUi2DveDVgtEkn6OOiqaH26oMjaqWCEa7lwt3ajFwUQTKEj0uthcWeGaFRoYwdYkpEfOFCA==",
   "client-origin-auth-https://cypher-note-haven.lovable.app": "hhIGGhAJndmeW7R51WCFNCZCEd+jiSl6zBVc4sIkYRbV43I+wwR5vWNtXCjymlHaVZS86aPs6keHcpbzoogsBg==",
   "client-origin-auth-https://privaf-vibe-vault.lovable.app": "qDJdjSuU09fN+CqiMp7Ub/kG7aPa3YtsNMcdXgDqYNrVhEOacebVIFNVOCYz3QB8EgnngmHbZrl9JaADWHGFDg==",
-  "client-origin-auth-http://localhost:8080": "KjlVdzOyzggFYvcBp6rTXGLjma8yi8iXgKMp3z5JnNz0j5W+KOpR5EzVqgR3J5WWC3ckCRsPwZ3q79z22YPGAw=="
+  "client-origin-auth-http://localhost:8080": "KjlVdzOyzggFYvcBp6rTXGLjma8yi8iXgKMp3z5JnNz0j5W+KOpR5EzVqgR3J5WWC3ckCRsPwZ3q79z22YPGAw==",
+  "client-origin-auth-https://395f2f6c-e83d-4e36-bf08-cd2c5ecbb7b8.lovableproject.com": "TEMP_AUTH_KEY_FOR_CURRENT_DOMAIN",
+  "doEncrypt": ["note", "file", "file_metadata"],
+  "doDecrypt": ["note", "file", "file_metadata"]
 }
