@@ -88,10 +88,10 @@ const Index = () => {
                 PrivAF is not certified with any of these
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                <ComplianceLogo name="ISO27001:2022" />
-                <ComplianceLogo name="HIPAA" />
-                <ComplianceLogo name="SOC 2" />
-                <ComplianceLogo name="GDPR" />
+                <ComplianceLogo name="ISO27001:2022" imageSrc="/lovable-uploads/cf4f2343-7bb9-4a97-bc94-e82564e67e1b.png" />
+                <ComplianceLogo name="HIPAA" imageSrc="/lovable-uploads/cf4f2343-7bb9-4a97-bc94-e82564e67e1b.png" />
+                <ComplianceLogo name="SOC 2" imageSrc="/lovable-uploads/cf4f2343-7bb9-4a97-bc94-e82564e67e1b.png" />
+                <ComplianceLogo name="GDPR" imageSrc="/lovable-uploads/cf4f2343-7bb9-4a97-bc94-e82564e67e1b.png" />
               </div>
               <p className="text-sm text-muted-foreground italic text-center">
                 Because compliance isn't security. Math is.
