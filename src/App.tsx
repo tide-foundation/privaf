@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <TideCloakContextProvider config={{...adapter, redirectUri: "https://ondamike.github.io/privaf/auth/redirect"}}>
+      <TideCloakContextProvider config={{...adapter, redirectUri: "https://tide-foundation.github.io/privaf/auth/redirect"}}>
         <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Routes>
             <Route path="/" element={<Index />} />
