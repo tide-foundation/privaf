@@ -35,13 +35,13 @@ export default function Index() {
         </p>
 
         <Unauthenticated>
-          <div className="space-y-6 mb-12">
-            <Button onClick={login} variant="neon" size="lg" className="text-lg px-8 py-4 mb-4">
+          <div className="space-y-2 mb-12">
+            <Button onClick={login} variant="neon" size="lg" className="text-lg px-8 py-4 mb-2">
           <Eye className="mr-2" />
           Enter your vault
         </Button>
 
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground italic">
               Because no-one else can
             </p>
           </div>
