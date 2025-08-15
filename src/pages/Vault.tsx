@@ -232,7 +232,7 @@ export default function Vault() {
           </div>
           <div className="flex justify-center mb-6">
           <img 
-            src="/lovable-uploads/ce72950e-ea40-4444-bc38-4e938049df7b.png" 
+            src={`${import.meta.env.BASE_URL}/lovable-uploads/ce72950e-ea40-4444-bc38-4e938049df7b.png`} 
             alt="PrivAF - Neon logo with padlock and sunglasses" 
             className="h-48 w-auto"
           />

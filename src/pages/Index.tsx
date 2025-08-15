@@ -21,7 +21,7 @@ export default function Index() {
           </div>
         </Authenticated>
         <div className="flex justify-center mb-6">
-          <img src="/lovable-uploads/ce72950e-ea40-4444-bc38-4e938049df7b.png" alt="PrivAF - Neon logo with padlock and sunglasses" className="h-48 w-auto" />
+          <img src={`${import.meta.env.BASE_URL}/lovable-uploads/ce72950e-ea40-4444-bc38-4e938049df7b.png`} alt="PrivAF - Neon logo with padlock and sunglasses" className="h-48 w-auto" />
         </div>
         <h2 className="text-3xl font-bold mb-8 text-center">
               Vibe <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Coded.</span> Provably <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Secure.</span>
@@ -106,12 +106,12 @@ export default function Index() {
               <Card className="p-6 bg-card/50 backdrop-blur border-border/50">
                 <h3 className="font-semibold mb-4 flex items-center justify-center gap-2">Not (officially) certified with:</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-4">
-                  <ComplianceLogo name="ISO27001:2022" imageSrc="/lovable-uploads/556a1445-7570-4178-90d8-44351d2125a0.png" />
-                  <ComplianceLogo name="HIPAA" imageSrc="/lovable-uploads/373a52d7-7db5-4d14-9b9b-f9d1f638110a.png" />
-                  <ComplianceLogo name="SOC 2" imageSrc="/lovable-uploads/81c16bd4-6177-4650-80f7-7619a0195b20.png" />
-                  <ComplianceLogo name="GDPR" imageSrc="/lovable-uploads/5b6a3904-e36c-4ff2-84f7-bb1c6f11e947.png" />
-                  <ComplianceLogo name="PCI DSS" imageSrc="/lovable-uploads/6396ad59-1c05-46e6-9a8d-315015d0c67d.png" />
-                  <ComplianceLogo name="FedRAMP" imageSrc="/lovable-uploads/e8de0929-f1ff-4653-9a55-33b985b0fda8.png" />
+                  <ComplianceLogo name="ISO27001:2022" imageSrc={`${import.meta.env.BASE_URL}/lovable-uploads/556a1445-7570-4178-90d8-44351d2125a0.png`} />
+                  <ComplianceLogo name="HIPAA" imageSrc={`${import.meta.env.BASE_URL}/lovable-uploads/373a52d7-7db5-4d14-9b9b-f9d1f638110a.png`} />
+                  <ComplianceLogo name="SOC 2" imageSrc={`${import.meta.env.BASE_URL}/lovable-uploads/81c16bd4-6177-4650-80f7-7619a0195b20.png`} />
+                  <ComplianceLogo name="GDPR" imageSrc={`${import.meta.env.BASE_URL}/lovable-uploads/5b6a3904-e36c-4ff2-84f7-bb1c6f11e947.png`} />
+                  <ComplianceLogo name="PCI DSS" imageSrc={`${import.meta.env.BASE_URL}/lovable-uploads/6396ad59-1c05-46e6-9a8d-315015d0c67d.png`} />
+                  <ComplianceLogo name="FedRAMP" imageSrc={`${import.meta.env.BASE_URL}/lovable-uploads/e8de0929-f1ff-4653-9a55-33b985b0fda8.png`} />
                 </div>
                 <p className="text-sm text-muted-foreground italic text-center">
                   Because compliance isn't security. Math is.
