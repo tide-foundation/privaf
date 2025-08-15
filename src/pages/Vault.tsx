@@ -136,50 +136,37 @@ export default function Vault() {
   };
 
   const handleDownload = (item: VaultItem) => {
-    if (!item.isDecrypted || !item.decryptedData || item.type !== 'file') {
-      toast({
-        title: "Download Failed",
-        description: "File must be decrypted first",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    try {
-      const { fileData, metadata } = item.decryptedData as { fileData: string; metadata: any };
-      
-      // Convert base64 to blob
-      const byteCharacters = atob(fileData);
-      const byteNumbers = new Array(byteCharacters.length);
-      for (let i = 0; i < byteCharacters.length; i++) {
-        byteNumbers[i] = byteCharacters.charCodeAt(i);
+    if (!item.isDecrypted || !item.decryptedData || item.type !== 'file')
+      return toast({ title: "Download Failed", description: "File must be decrypted first", variant: "destructive" });
+  
+    const { fileData, metadata } = item.decryptedData;
+  
+    const toBlob = (data: any, type: string) => {
+      if (data instanceof Uint8Array) return new Blob([data], { type });
+      if (data instanceof ArrayBuffer) return new Blob([new Uint8Array(data)], { type });
+      if (typeof data === "string") {
+        if (data.startsWith("data:")) return fetch(data).then(r => r.blob());
+        if (/^\d+(,\d+)+$/.test(data)) return new Blob([Uint8Array.from(data.split(",").map(Number))], { type });
+        const bin = atob(data.replace(/^data:[^;]+;base64,/, "").replace(/\s+/g, "").replace(/-/g, "+").replace(/_/g, "/"));
+        return new Blob([Uint8Array.from(bin, c => c.charCodeAt(0))], { type });
       }
-      const byteArray = new Uint8Array(byteNumbers);
-      const blob = new Blob([byteArray], { type: metadata.type });
-
-      // Create download link
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = metadata.name;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-
-      toast({
-        title: "Downloaded",
-        description: `${metadata.name} has been downloaded`,
+      throw new Error("Unsupported fileData type");
+    };
+  
+    Promise.resolve(toBlob(fileData, metadata.type))
+      .then(blob => {
+        const url = URL.createObjectURL(blob);
+        const a = Object.assign(document.createElement('a'), { href: url, download: metadata.name });
+        document.body.appendChild(a); a.click(); a.remove();
+        URL.revokeObjectURL(url);
+        toast({ title: "Downloaded", description: `${metadata.name} has been downloaded` });
+      })
+      .catch(err => {
+        console.error("Download failed:", err);
+        toast({ title: "Download Failed", description: "Unable to download file", variant: "destructive" });
       });
-    } catch (error) {
-      console.error('Download failed:', error);
-      toast({
-        title: "Download Failed",
-        description: "Unable to download file",
-        variant: "destructive",
-      });
-    }
   };
+
 
   const isImageFile = (metadata: any) => {
     return metadata?.type?.startsWith('image/');
