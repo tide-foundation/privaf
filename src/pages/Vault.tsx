@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Plus, FileText, Image, Eye, EyeOff, Trash2, Edit, Lock, Unlock } from 'lucide-react';
+import { Plus, FileText, Image, Eye, EyeOff, Trash2, Edit, Lock, Unlock, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
@@ -14,7 +14,7 @@ export default function Vault() {
   const [showFileUploader, setShowFileUploader] = useState(false);
   const [editingItem, setEditingItem] = useState<VaultItem | null>(null);
   const [loading, setLoading] = useState(true);
-  const { doDecrypt, doEncrypt } = useTideCloak();
+  const { doDecrypt, doEncrypt, logout } = useTideCloak();
   const { toast } = useToast();
 
   useEffect(() => {
@@ -159,7 +159,13 @@ export default function Vault() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5">
       <div className="container mx-auto px-6 py-8">
-        <header className="text-center mb-8">
+        <header className="text-center mb-8 relative">
+          <div className="absolute top-0 right-0">
+            <Button onClick={logout} variant="outline" size="sm" className="border-primary/30 text-primary hover:bg-primary/10">
+              <LogOut className="w-4 h-4 mr-2" />
+              Logout
+            </Button>
+          </div>
           <div className="flex justify-center mb-6">
           <img 
             src="/lovable-uploads/ce72950e-ea40-4444-bc38-4e938049df7b.png" 

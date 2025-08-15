@@ -12,7 +12,14 @@ export default function Index() {
   } = useTideCloak();
   const navigate = useNavigate();
   return <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5">
-      <header className="container mx-auto px-6 py-8 text-center">
+      <header className="container mx-auto px-6 py-8 text-center relative">
+        <Authenticated>
+          <div className="absolute top-4 right-4">
+            <Button onClick={logout} variant="outline" size="sm" className="border-primary/30 text-primary hover:bg-primary/10">
+              Logout
+            </Button>
+          </div>
+        </Authenticated>
         <div className="flex justify-center mb-6">
           <img src="/lovable-uploads/ce72950e-ea40-4444-bc38-4e938049df7b.png" alt="PrivAF - Neon logo with padlock and sunglasses" className="h-48 w-auto" />
         </div>
