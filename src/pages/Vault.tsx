@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Plus, FileText, Image, Eye, EyeOff, Trash2, Edit, Lock, Unlock, LogOut } from 'lucide-react';
+import { Plus, FileText, Image, Eye, EyeOff, Trash2, Edit, Lock, Unlock, LogOut, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
@@ -135,6 +135,61 @@ export default function Vault() {
     }
   };
 
+  const handleDownload = (item: VaultItem) => {
+    if (!item.isDecrypted || !item.decryptedData || item.type !== 'file') {
+      toast({
+        title: "Download Failed",
+        description: "File must be decrypted first",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      const { fileData, metadata } = item.decryptedData as { fileData: string; metadata: any };
+      
+      // Convert base64 to blob
+      const byteCharacters = atob(fileData);
+      const byteNumbers = new Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+      }
+      const byteArray = new Uint8Array(byteNumbers);
+      const blob = new Blob([byteArray], { type: metadata.type });
+
+      // Create download link
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = metadata.name;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      toast({
+        title: "Downloaded",
+        description: `${metadata.name} has been downloaded`,
+      });
+    } catch (error) {
+      console.error('Download failed:', error);
+      toast({
+        title: "Download Failed",
+        description: "Unable to download file",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const isImageFile = (metadata: any) => {
+    return metadata?.type?.startsWith('image/');
+  };
+
+  const getImagePreview = (fileData: string, metadata: any) => {
+    if (!isImageFile(metadata)) return null;
+    return `data:${metadata.type};base64,${fileData}`;
+  };
+
   const formatDate = (timestamp: number) => {
     return new Date(timestamp).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -233,7 +288,27 @@ export default function Vault() {
                                 : 'Content available'}
                             </p>
                           ) : (
-                            <p className="text-sm text-green-600">File decrypted and ready</p>
+                            <div>
+                              {(() => {
+                                const { fileData, metadata } = item.decryptedData as { fileData: string; metadata: any };
+                                const imagePreview = getImagePreview(fileData, metadata);
+                                
+                                if (imagePreview) {
+                                  return (
+                                    <div className="space-y-2">
+                                      <img 
+                                        src={imagePreview} 
+                                        alt="Decrypted preview" 
+                                        className="max-w-full max-h-64 rounded-lg border"
+                                      />
+                                      <p className="text-sm text-green-600">Image preview available</p>
+                                    </div>
+                                  );
+                                } else {
+                                  return <p className="text-sm text-green-600">Ready to download</p>;
+                                }
+                              })()}
+                            </div>
                           )}
                         </div>
                       ) : (
@@ -275,6 +350,17 @@ export default function Vault() {
                         onClick={() => handleEdit(item)}
                       >
                         <Edit className="w-4 h-4" />
+                      </Button>
+                    )}
+                    
+                    {item.type === 'file' && item.isDecrypted && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => handleDownload(item)}
+                        className="border-blue-500 text-blue-600 hover:bg-blue-50"
+                      >
+                        <Download className="w-4 h-4" />
                       </Button>
                     )}
                     
