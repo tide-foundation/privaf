@@ -225,7 +225,7 @@ export default function Vault() {
       <div className="container mx-auto px-6 py-8">
         <header className="text-center mb-8 relative">
           <div className="absolute top-0 right-0">
-            <Button onClick={logout} variant="outline" size="sm" className="border-neon-blue text-neon-blue hover:bg-neon-blue/10 hover:text-neon-blue">
+            <Button onClick={logout} variant="neonBlue" size="sm">
               <LogOut className="w-4 h-4 mr-2" />
               Logout
             </Button>
@@ -246,16 +246,13 @@ export default function Vault() {
           <Button 
             onClick={() => setShowNoteEditor(true)}
             variant="neon"
-            size="lg"
-            className="text-lg px-8 py-4"
           >
             <Plus className="w-4 h-4 mr-2" />
             Add Note
           </Button>
           <Button 
             onClick={() => setShowFileUploader(true)}
-            variant="outline"
-            className="border-neon-blue text-neon-blue hover:bg-neon-blue/10 hover:text-neon-blue"
+            variant="neonBlue"
           >
             <Plus className="w-4 h-4 mr-2" />
             Upload File
