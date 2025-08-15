@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { TideCloakContextProvider, Authenticated, Unauthenticated } from '@tidecloak/react';
-import adapter from '../tidecloakAdapter.json';
+import adapter from './tidecloakAdapter.json';
 import Index from "./pages/Index";
 import Vault from "./pages/Vault";
 import AuthRedirect from "./pages/AuthRedirect";
@@ -17,8 +17,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <TideCloakContextProvider config={adapter}>
-        <BrowserRouter>
+      <TideCloakContextProvider config={{...adapter, redirectUri: "https://tide-foundation.github.io/privaf/auth/redirect"}}>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/vault" element={
