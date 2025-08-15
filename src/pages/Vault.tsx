@@ -185,9 +185,31 @@ export default function Vault() {
     return metadata?.type?.startsWith('image/');
   };
 
-  const getImagePreview = (fileData: string, metadata: any) => {
+  const getImagePreview = (fileData: string | Uint8Array, metadata: any) => {
     if (!isImageFile(metadata)) return null;
-    return `data:${metadata.type};base64,${fileData}`;
+  
+    // Helper to convert Uint8Array to base64
+    const uint8ArrayToBase64 = (bytes: Uint8Array) => {
+      let binary = '';
+      const len = bytes.byteLength;
+      for (let i = 0; i < len; i++) {
+        binary += String.fromCharCode(bytes[i]);
+      }
+      return btoa(binary);
+    };
+  
+    let base64Data: string;
+  
+    if (fileData instanceof Uint8Array) {
+      base64Data = uint8ArrayToBase64(fileData);
+    } else if (typeof fileData === 'string') {
+      // Trim just in case and ensure no accidental breaks/spaces
+      base64Data = fileData.replace(/\s+/g, '');
+    } else {
+      return null;
+    }
+  
+    return `data:${metadata.type};base64,${base64Data}`;
   };
 
   const formatDate = (timestamp: number) => {
