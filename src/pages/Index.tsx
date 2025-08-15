@@ -86,7 +86,7 @@ export default function Index() {
               <Bug className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-3">Zero quality assurance</h3>
-            <p className="text-muted-foreground">We've barely tested this thing.</p>
+            <p className="text-muted-foreground">We've barely tested this vieb coded app.</p>
           </div>
         </div>
 
