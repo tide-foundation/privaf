@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Plus, FileText, Image, Eye, EyeOff, Trash2, Edit, Lock, Unlock, LogOut, Download } from 'lucide-react';
+import { Plus, FileText, Image, Eye, EyeOff, Trash2, Edit, Lock, Unlock, LogOut, Download, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
@@ -225,7 +225,7 @@ export default function Vault() {
       <div className="container mx-auto px-6 py-8">
         <header className="text-center mb-8 relative">
           <div className="absolute top-0 right-0">
-            <Button onClick={logout} variant="outline" size="sm" className="border-primary/30 text-primary hover:bg-primary/10">
+            <Button onClick={logout} variant="outline" size="sm" className="border-neon-blue text-neon-blue hover:bg-neon-blue/10 hover:text-neon-blue">
               <LogOut className="w-4 h-4 mr-2" />
               Logout
             </Button>
@@ -245,7 +245,9 @@ export default function Vault() {
         <div className="flex justify-center gap-4 mb-8">
           <Button 
             onClick={() => setShowNoteEditor(true)}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            variant="neon"
+            size="lg"
+            className="text-lg px-8 py-4"
           >
             <Plus className="w-4 h-4 mr-2" />
             Add Note
@@ -253,7 +255,7 @@ export default function Vault() {
           <Button 
             onClick={() => setShowFileUploader(true)}
             variant="outline"
-            className="border-primary text-primary hover:bg-primary/10"
+            className="border-neon-blue text-neon-blue hover:bg-neon-blue/10 hover:text-neon-blue"
           >
             <Plus className="w-4 h-4 mr-2" />
             Upload File
@@ -310,19 +312,25 @@ export default function Vault() {
                                         alt="Decrypted preview" 
                                         className="max-w-full max-h-64 rounded-lg border"
                                       />
-                                      <p className="text-sm text-green-600">Image preview available</p>
+                                       <p className="text-sm text-neon-pink flex items-center gap-2">
+                                         <Check className="w-4 h-4" />
+                                         Image preview available
+                                       </p>
                                     </div>
                                   );
                                 } else {
-                                  return <p className="text-sm text-green-600">Ready to download</p>;
+                                   return <p className="text-sm text-neon-pink flex items-center gap-2">
+                                     <Check className="w-4 h-4" />
+                                     Ready to download
+                                   </p>;
                                 }
                               })()}
                             </div>
                           )}
                         </div>
                       ) : (
-                        <div className="mt-3 p-3 bg-destructive/10 rounded-lg border border-destructive/20">
-                          <p className="text-sm text-destructive flex items-center gap-2">
+                        <div className="mt-3 p-3 bg-neon-blue/10 rounded-lg border border-neon-blue/20">
+                          <p className="text-sm text-neon-blue flex items-center gap-2">
                             <Lock className="w-4 h-4" />
                             Content is encrypted
                           </p>
@@ -337,7 +345,7 @@ export default function Vault() {
                         size="sm"
                         variant="outline"
                         onClick={() => handleEncrypt(item)}
-                        className="border-orange-500 text-orange-600 hover:bg-orange-50"
+                        className="border-neon-purple text-neon-purple hover:bg-neon-purple/10 hover:text-neon-purple"
                       >
                         <EyeOff className="w-4 h-4" />
                       </Button>
@@ -346,7 +354,7 @@ export default function Vault() {
                         size="sm"
                         variant="outline"
                         onClick={() => handleDecrypt(item)}
-                        className="border-green-500 text-green-600 hover:bg-green-50"
+                        className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan/10 hover:text-neon-cyan"
                       >
                         <Eye className="w-4 h-4" />
                       </Button>
@@ -357,6 +365,7 @@ export default function Vault() {
                         size="sm"
                         variant="outline"
                         onClick={() => handleEdit(item)}
+                        className="border-neon-pink text-neon-pink hover:bg-neon-pink/10 hover:text-neon-pink"
                       >
                         <Edit className="w-4 h-4" />
                       </Button>
@@ -367,7 +376,7 @@ export default function Vault() {
                         size="sm"
                         variant="outline"
                         onClick={() => handleDownload(item)}
-                        className="border-blue-500 text-blue-600 hover:bg-blue-50"
+                        className="border-neon-blue text-neon-blue hover:bg-neon-blue/10 hover:text-neon-blue"
                       >
                         <Download className="w-4 h-4" />
                       </Button>
@@ -377,7 +386,7 @@ export default function Vault() {
                       size="sm"
                       variant="outline"
                       onClick={() => handleDelete(item)}
-                      className="border-destructive text-destructive hover:bg-destructive/10"
+                      className="border-destructive text-destructive hover:bg-destructive/10 hover:text-destructive"
                     >
                       <Trash2 className="w-4 h-4" />
                     </Button>
